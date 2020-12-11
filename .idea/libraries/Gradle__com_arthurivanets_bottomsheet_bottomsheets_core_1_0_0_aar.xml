@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.arthurivanets.bottomsheet:bottomsheets-core:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a732e59860c3d154f4655cf1b25c4ba2/bottomsheets-core-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a732e59860c3d154f4655cf1b25c4ba2/bottomsheets-core-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a732e59860c3d154f4655cf1b25c4ba2/bottomsheets-core-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arthurivanets.bottomsheet/bottomsheets-core/1.0.0/4ae9fba5b129ab0b3091da7de35f67ca8e40bbce/bottomsheets-core-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arthurivanets.bottomsheet/bottomsheets-core/1.0.0/1e2b73509898cef44f9b908888bcc7d3aa01cd15/bottomsheets-core-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

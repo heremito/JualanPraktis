@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.qhutch.bottomsheetlayout:bottomsheetlayout:0.1.9@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba7b41ebec28d592c5b45080c233e171/bottomsheetlayout-0.1.9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba7b41ebec28d592c5b45080c233e171/bottomsheetlayout-0.1.9/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba7b41ebec28d592c5b45080c233e171/bottomsheetlayout-0.1.9/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.qhutch.bottomsheetlayout/bottomsheetlayout/0.1.9/59431abbad453bce36d974db875f3162cd9d67a8/bottomsheetlayout-0.1.9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.qhutch.bottomsheetlayout/bottomsheetlayout/0.1.9/9916bd08d203926648082034294a4d2254724175/bottomsheetlayout-0.1.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

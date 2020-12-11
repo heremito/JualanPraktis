@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/darkRed"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/keranjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:text="Register"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <!-- -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Data Diri"
+                android:fontFamily="@font/nuunito_bold"
+                />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchMode="columnWidth"
+                android:numColumns="auto_fit">
+
+                <ImageView
+                    android:id="@+id/upload_profile_picture"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="left"
+                    android:src="@drawable/icon_profile_register"
+                    android:scaleType="centerCrop"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_input_nama"
+                    android:layout_centerHorizontal="true">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/input_nama"
+                        android:inputType="textCapSentences"
+                        android:background="@drawable/border_daftar"
+                        android:hint="Nama lengkap"
+                        android:fontFamily="@font/nuunito_bold"
+                        android:ems="10"/>
+
+                    <!-- Email -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_input_email" >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/input_email"
+                            android:inputType="textEmailAddress"
+                            android:hint="Email"
+                            android:background="@drawable/border_daftar"
+                            android:fontFamily="@font/nuunito_bold"
+                            android:textColorHint="#99000000"
+                            android:ems="10"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Pass -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleDrawable="@android:drawable/ic_menu_view"
+                        android:id="@+id/layout_input_pass">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/input_pass"
+                            android:inputType="textPassword"
+                            android:hint="Password"
+                            android:background="@drawable/border_daftar"
+                            android:fontFamily="@font/nuunito_bold"
+                            android:textColorHint="#99000000"
+                            android:ems="10"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </GridLayout>
+
+            <!--No hp-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_input_nohp"
+                android:layout_centerHorizontal="true" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_nohp"
+                    android:hint="No Hp"
+                    android:background="@drawable/border_daftar"
+                    android:fontFamily="@font/nuunito_bold"
+                    android:textColorHint="#99000000"
+                    android:inputType="number"
+                    android:ems="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Alamat -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_input_alamat"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_alamat"
+                    android:hint="Alamat Lengkap"
+                    android:inputType="textPostalAddress"
+                    android:background="@drawable/border_daftar"
+                    android:fontFamily="@font/nuunito_bold"
+                    android:textColorHint="#99000000"
+                    android:ems="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Provinsi"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_daftar"
+                >
+
+                <Spinner
+                    android:id="@+id/spin_provinsi"
+                    android:spinnerMode="dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kota/Kabupaten"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_daftar"
+                >
+
+                <Spinner
+                    android:id="@+id/spin_kota"
+                    android:spinnerMode="dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kecamatan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_daftar"
+                >
+
+                <Spinner
+                    android:id="@+id/spin_kecamatan"
+                    android:spinnerMode="dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!-- Nama Toko Online -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_input_nama_toko">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_nama_toko"
+                    android:hint="Nama Toko Online"
+                    android:inputType="textCapSentences"
+                    android:background="@drawable/border_daftar"
+                    android:fontFamily="@font/nuunito_bold"
+                    android:textColorHint="#99000000"
+                    android:ems="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_input_no_ktp"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_no_ktp"
+                    android:hint="Nomor KTP"
+                    android:background="@drawable/border_daftar"
+                    android:fontFamily="@font/nuunito_bold"
+                    android:textColorHint="#99000000"
+                    android:ems="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_input_no_npwp"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_no_npwp"
+                    android:hint="Nomor NPWP"
+                    android:background="@drawable/border_daftar"
+                    android:fontFamily="@font/nuunito_bold"
+                    android:textColorHint="#99000000"
+                    android:ems="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Re.Pass -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_input_telp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleDrawable="@android:drawable/ic_menu_view"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_ulang"
+                    android:hint="Ulang Password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/border_daftar"
+                    android:fontFamily="@font/light"
+                    android:textColorHint="#99000000"
+                    android:ems="10"
+                    android:visibility="gone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:background="@color/browser_actions_bg_grey"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="25dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="Data Bank"
+                android:fontFamily="@font/nuunito_bold"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_input_atas_nama" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_atas_nama"
+                    android:inputType="textCapSentences"
+                    android:hint="Nama"
+                    android:background="@drawable/border_daftar"
+                    android:fontFamily="@font/nuunito_bold"
+                    android:textColorHint="#99000000"
+                    android:ems="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_input_no_rek" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_no_rek"
+                    android:inputType="number"
+                    android:hint="Nomor Rekening"
+                    android:background="@drawable/border_daftar"
+                    android:fontFamily="@font/nuunito_bold"
+                    android:textColorHint="#99000000"
+                    android:ems="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_daftar"
+                >
+
+                <Spinner
+                    android:id="@+id/spin_nama_bank"
+                    android:spinnerMode="dialog"
+                    android:autofillHints="nama bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_input_nama_bank" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_nama_bank"
+                    android:hint="Nama bank"
+                    android:background="@drawable/border_daftar"
+                    android:fontFamily="@font/nuunito_bold"
+                    android:textColorHint="#99000000"
+                    android:ems="10"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_daftar"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="50dp"
+                android:fontFamily="@font/nuunito_bold"
+                android:text="Daftar"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_lightred"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

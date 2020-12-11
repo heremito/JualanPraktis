@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="www.starcom.com.jualanpraktis">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_logo_hitam"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_logo_putih_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="icon, label">
+        <activity android:name="www.starcom.com.jualanpraktis.feature.KonfirmasiTransferActivity"></activity>
+        <activity android:name="www.starcom.com.jualanpraktis.feature.form_pemesanan.ResultTransferActivity" />
+        <activity android:name="www.starcom.com.jualanpraktis.feature.produk.ListProdukDiskonActivity" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.belanja_bulanan.SaranActivity"
+            android:theme="@style/AppThemecomponet" />
+        <activity android:name="www.starcom.com.jualanpraktis.feature.produk.ListSubKategoriProdukActivity" />
+        <activity android:name="www.starcom.com.jualanpraktis.TestActivity" />
+        <activity android:name="www.starcom.com.jualanpraktis.feature.produk.ListProdukActivity" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.form_pemesanan.ResultCodActivity"
+            android:theme="@style/AppThemecomponet" />
+
+        <service android:name="www.starcom.com.jualanpraktis.service.ServiceTask" />
+
+        <activity
+            android:name="www.starcom.com.jualanpraktis.WebLawActivity"
+            android:theme="@style/ThemeDefault" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.resi_pengiriman.DetailResiPengirimanActivity"
+            android:theme="@style/ThemeDefault" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.pesanan_saya.DetailPesananActivity"
+            android:theme="@style/ThemeDefault" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.form_pemesanan.PilihLayananEkspedisiActivity"
+            android:theme="@style/AppThemecomponet" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.form_pemesanan.PilihAlamatActivity"
+            android:theme="@style/AppThemecomponet" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.form_pemesanan.FormTransaksiActivity"
+            android:theme="@style/AppThemecomponet" />
+        <activity android:name="www.starcom.com.jualanpraktis.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.pembayaran.ResultPembayaranActivity"
+            android:theme="@style/AppThemecomponet" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.pembayaran.PembayaranActivity"
+            android:theme="@style/AppThemecomponet" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="www.starcom.com.jualanpraktis.MapsActivity"
+            android:label="@string/title_activity_maps" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="www.starcom.com.jualanpraktis.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemecomponet" />
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="www.starcom.com.jualanpraktis.SearchResultsActivity"
+            android:label=""
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="www.starcom.com.jualanpraktis.SubKategori.produk"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.feature.produk.ProdukDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.daftar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.alamat_pengiriman"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.konfirmasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="www.starcom.com.jualanpraktis.keranjang2"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

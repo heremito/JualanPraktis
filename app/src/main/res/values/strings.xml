@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Jualan Praktis</string>
+
+    <!--FAcebook-->
+    <string name="facebook_app_id">2581253162195745</string>
+    <string name="fb_login_protocol_scheme">fb2581253162195745</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="header_saran">Bila Produk yang anda cari di Batam Mall tidak ada? Anda bisa meminta BatamMall membelinya untuk anda.</string>
+
+    <string name="belaja_kosong_p1">Anda dapat menyimpan daftar kebutuhan rutin bulanan di halaman ini, Sehingga anda tidak perlu mencari barang di aplikasi setiap kali anda belanja bulanan.</string>
+    <string name="belaja_kosong_p2">Kami akan ingatkan anda setiap bulan untuk menebus belajaan anda</string>
+    <string name="belanja_kosong_p3">Anda juga bisa menuliskan barang-barang belanjaan anda yang tidak ada di aplikasi kami supaya kami dapat melengkapi untuk anda.</string>
+
+
+</resources>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/keranjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/akronim"
+                android:text="BM"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cari"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_cari">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img"
+                   android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cari"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/img"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:hint="Cari Produk"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pagerslide"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+            <LinearLayout
+                android:id="@+id/SliderDots"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="KEB.SEHARI_HARI"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item1"
+                android:layout_below="@+id/tv1"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="MAKANAN BEKU"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item2"
+                android:layout_below="@+id/tv2"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="MAKANAN INSTAN DAN KALENG"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"
+                android:layout_marginStart="15dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item3"
+                android:layout_below="@+id/tv3"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="BUAH,SAYUR,DAN IKAN"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"
+                android:layout_marginStart="15dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item4"
+                android:layout_below="@+id/tv4"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAKANAN RINGAN"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:background="@android:color/white"
+                android:layout_marginBottom="2dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item5"
+                android:layout_below="@+id/tv5"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="MINUMAN"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item6"
+                android:layout_below="@+id/tv6"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="OBAT-OBATAN"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"
+                android:layout_marginStart="15dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item7"
+                android:layout_below="@+id/tv7"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="KEB.IBU DAN ANAK"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item8"
+                android:layout_below="@+id/tv8"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="PERL MANDI DAN KECANTIKAN"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item9"
+                android:layout_below="@+id/tv9"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="PEM.DAPUR,K.MANDI,DAN DETERGEN"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item10"
+                android:layout_below="@+id/tv10"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="PEMBASMI SERANGGA,DAN PENGHARUM RUANGAN"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item11"
+                android:layout_below="@+id/tv11"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="STATIONARY"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item12"
+                android:layout_below="@+id/tv12"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv13"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="FASION"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item13"
+                android:layout_below="@+id/tv13"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="ELEKTRONIK"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item14"
+                android:layout_below="@+id/tv14"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="FURNITURE"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_item15"
+                android:layout_below="@+id/tv15"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

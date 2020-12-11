@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".feature.produk.ListProdukDiskonActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:minHeight="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/keranjang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/bahnschrift"
+                        android:text="BM"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="30sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <ImageView
+                        android:paddingTop="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/white_logo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <FrameLayout
+                android:background="@android:color/holo_blue_dark"
+                android:layout_margin="20dp"
+                android:id="@+id/layout_akun"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:background="@drawable/bg_blue"
+                                android:layout_height="120dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:text="Limit Belanja"
+                                    android:textSize="20sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:layout_marginTop="4dp"
+                                    android:id="@+id/txt_limit"
+                                    style="@style/TextAppearance.AppCompat.Title"/>
+
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_marginTop="16dp"
+                                android:text="Nama"
+                                android:textColor="@android:color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/nama"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="-"/>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:text="Nomor Induk Karyawan"
+                                android:textColor="@android:color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/txt_no_induk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="-"/>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:text="Email"
+                                android:textColor="@android:color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="-"/>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:text="Jenis Kelamin"
+                                android:textColor="@android:color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/jk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="-"/>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:text="No Hp"
+                                android:textColor="@android:color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/nohp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="-"/>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:text="Alamat"
+                                android:textColor="@android:color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/alamat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="-"/>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                >
+                                <Button
+                                    android:id="@+id/btn_ubah_sandi"
+                                    android:text="Ubah Sandi"
+                                    android:textColor="@android:color/white"
+                                    android:background="@drawable/bg_masuk"
+                                    android:backgroundTint="@android:color/holo_blue_light"
+                                    android:layout_width="0dp"
+                                    android:textSize="12sp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/view2"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    />
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="1dp"
+
+                                    android:id="@+id/view2"
+                                    android:background="@android:color/transparent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"/>
+
+                                <Button
+                                    android:id="@+id/btn_ubah_profile"
+                                    android:text="Ubah Profile"
+                                    android:textSize="12sp"
+                                    android:layout_marginRight="4dp"
+                                    android:textColor="@android:color/white"
+                                    android:background="@drawable/bg_masuk"
+                                    android:backgroundTint="@android:color/holo_orange_dark"
+                                    android:layout_width="0dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/view2"
+                                    />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <Button
+                                android:id="@+id/btn_logout"
+                                android:text="Logout"
+                                android:textColor="@android:color/white"
+                                android:background="@drawable/bg_masuk"
+                                android:backgroundTint="@android:color/holo_red_light"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="50dp"
+                                android:paddingRight="50dp"
+                                android:textSize="12sp"
+                                android:layout_marginTop="8dp"
+                                android:layout_height="wrap_content"
+                                />
+
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

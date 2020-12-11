@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    cardview:cardBackgroundColor="@android:color/white"
+    cardview:cardCornerRadius="12dp"
+    cardview:cardElevation="3dp"
+    android:layout_marginBottom="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_margin="6dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:id="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            cardview:layout_constraintStart_toStartOf="parent"
+            cardview:layout_constraintEnd_toEndOf="parent"
+            cardview:layout_constraintTop_toTopOf="parent"
+            cardview:layout_constraintBottom_toBottomOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtstatus"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Resi : "
+                    android:layout_marginTop="2dp"
+                    android:textColor="@android:color/black"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    cardview:layout_constraintTop_toTopOf="@id/lbl_nomor_resi"
+                    cardview:layout_constraintStart_toStartOf="parent"
+                    cardview:layout_constraintTop_toBottomOf="@id/lbl_nomor_resi"/>
+                <TextView
+                    android:gravity="end"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/lbl_nomor_resi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11560233200511171030"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:layout_marginLeft="8dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:background="@drawable/bg_green"
+                    android:textColor="@android:color/white"
+                    android:textStyle="normal"
+                    android:typeface="sans"
+                    cardview:layout_constraintTop_toTopOf="parent"
+                    cardview:layout_constraintBottom_toBottomOf="parent"
+                    cardview:layout_constraintStart_toEndOf="@id/txtstatus"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="6dp"
+                android:background="@android:color/black"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tx_id"
+                    android:text="ID pesanan"
+                    android:textColor="@android:color/black"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    cardview:layout_constraintTop_toTopOf="@id/lbl_nama"
+                    cardview:layout_constraintStart_toStartOf="parent"
+                    cardview:layout_constraintBottom_toBottomOf="@id/lbl_nama"/>
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/lbl_nama"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="11560233200511171030"
+                    android:gravity="end"
+                    cardview:layout_constraintEnd_toEndOf="parent"
+                    cardview:layout_constraintTop_toTopOf="parent"
+                    cardview:layout_constraintStart_toEndOf="@+id/tx_id"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/com_facebook_blue"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+
+
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tx_tanggal"
+                    android:text="Kurir"
+                    android:textColor="@android:color/black"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    cardview:layout_constraintTop_toTopOf="@id/lbl_kurir"
+                    cardview:layout_constraintStart_toStartOf="parent"
+                    cardview:layout_constraintBottom_toBottomOf="@id/lbl_kurir"/>
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/lbl_kurir"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="21 agustus 2020"
+                    android:textColor="@android:color/black"
+                    android:gravity="end"
+                    cardview:layout_constraintEnd_toEndOf="parent"
+                    cardview:layout_constraintTop_toBottomOf="@+id/lbl_nama"
+                    cardview:layout_constraintStart_toEndOf="@+id/tx_tanggal"/>
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tx_nominal"
+                    android:text="Total Belanja"
+                    android:textColor="@android:color/black"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    cardview:layout_constraintTop_toTopOf="@id/lbl_nominal"
+                    cardview:layout_constraintStart_toStartOf="parent"
+                    cardview:layout_constraintBottom_toBottomOf="@id/lbl_nominal"/>
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/lbl_nominal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 200000"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:gravity="end"
+                    cardview:layout_constraintEnd_toEndOf="parent"
+                    cardview:layout_constraintTop_toBottomOf="@+id/lbl_kurir"
+                    cardview:layout_constraintStart_toEndOf="@+id/tx_nominal"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_lihat_detail"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                cardview:cardCornerRadius="6dp"
+                cardview:cardElevation="3dp"
+                android:layout_gravity="end"
+                android:background="@drawable/buttonstyleorange"
+                cardview:cardBackgroundColor="@android:color/holo_orange_dark"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lacak"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@android:color/white"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+            </androidx.cardview.widget.CardView>
+
+
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="6dp"
+                android:background="@android:color/black"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
